@@ -16,7 +16,10 @@
     box-sizing: border-box;
 }
 
-html {font-size: 100%;} /*16px*/
+html {
+    font-size: 100%; /*16px*/
+    font-kerning: auto;
+} 
 
 body {
 background: var(--light);
@@ -66,23 +69,38 @@ small, .text_small {font-size: 0.8rem;}
 .hero {
     position: relative;
     display: grid;
+    height: 100vh;
     grid-template-rows: 1fr 1fr;
     border-radius: 1rem 1rem 0 0;
 }
 
 .hero-top {
-    display: flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-content: center;
     grid-area: 1 / 1;
     background-color: var(--dark);
     border-radius: 1rem 1rem 0 0;
     color: var(--light);
-    text-align: center;
+}
+
+.hero-top h1 {
+    margin: 0 0 0 1rem;
+    padding: 1rem;
+    font-size: 3.5rem;
 }
 
 .recycled {
-    border-bottom: 0.25rem solid var(--main);
+    color: var(--accent-1);
+    font-size: larger;
+    font-variant: small-caps;
+}
+
+.allegheny-county {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.25rem solid var(--light);
 }
 
 /* 
