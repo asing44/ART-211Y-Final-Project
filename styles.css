@@ -17,30 +17,36 @@
 }
 
 html {
-    font-size: 100%; /*16px*/
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
     font-kerning: auto;
 } 
 
 body {
-background: var(--light);
-font-family: 'Titillium Web', sans-serif;
-font-weight: 400;
-line-height: 1.75;
-color: var(--dark);
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    background: var(--light);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--dark);
+    overflow: hidden
 }
 
 p {margin-bottom: 1rem;}
 
 h1, h2, h3, h4, h5 {
-margin: 3rem 0 1.38rem;
-font-family: 'Ubuntu', sans-serif;
-font-weight: 700;
-line-height: 1.3;
+    margin: 3rem 0 1.38rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 h1 {
-margin-top: 0;
-font-size: 3.052rem;
+    margin-top: 0;
+    font-size: 3.052rem;
+    line-height: 1.75;
 }
 
 h2 {font-size: 2.441rem;}
@@ -53,9 +59,8 @@ h5 {font-size: 1.25rem;}
 
 small, .text_small {font-size: 0.8rem;}
 
-.section {
-    height: 100vh;
-    width: 100%;
+.container {
+    padding: 1rem 2rem;
 }
 
 /* 
@@ -66,7 +71,141 @@ small, .text_small {font-size: 0.8rem;}
 ==== LANDING ====
 */
 
+.landing {
+    height: 100%;
+}
 
+/* Top */
+
+.landing-top {
+    height: 25%;
+    background-color: var(--dark); 
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    color: var(--light);
+    text-align: center;
+}
+
+.container.lt {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.recycled {
+    background-color: var(--accent-1);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Bottom */
+
+.landing-bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+}
+
+.instructions {
+    position: absolute;
+    height: 15%;
+    max-width: 40%;
+    top: 0%;
+    left: 0;
+    background-color: var(--dark);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-left-width: 0;
+    color: var(--light);
+}
+
+.container.lb-aside {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.recycle-wheel {
+    position: relative;
+    display: flex;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+}
+
+.main-icons {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+    align-items: center;
+    justify-items: center;
+    grid-template: repeat(3, 33%) / repeat(3, 33%);
+    z-index: 2;
+}
+
+.main-icons svg * {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-origin: 0% 0%;
+    transition: all 250ms ease-in-out;
+}
+
+.main-icons svg {
+    transition: all 250ms ease-in-out;
+}
+
+.main-icons svg:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#Cardboard {
+    height: 75%;
+    margin-left: 80%;
+    grid-area: 3 / 1;
+}
+
+#Clear-and-colored-glass {
+    height: 100%;
+    margin-right: 80%;
+    grid-area: 3 / 3;
+}
+
+#Plastic-1-and-2 {
+    height: 100%;
+    margin: 10% 10% 0 0;
+    grid-area: 2 / 3;
+}
+
+#Metal-cans {
+    height: 95%;
+    margin-right: 110%;
+    grid-area: 1 / 3;
+}
+
+#Loose-paper {
+    height: 100%;
+    margin: 10% 0 0 85%;
+    grid-area: 1 / 1;
+}
+
+#Newspaper-and-magazines {
+    height: 125%;
+    margin: 50% 25% 0 0;
+    grid-area: 2 / 1;
+}
+
+#Allegheny-County-logo {
+    position: absolute;
+    height: 25%;
+    z-index: 1;
+}
 
 /* 
 ==== / ====
