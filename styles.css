@@ -137,6 +137,16 @@ small, .text_small {font-size: 0.8rem;}
     aspect-ratio: 1 / 1;
 }
 
+.lb-background {
+    position: absolute;
+    height: 10vmax;
+    width: 10vmax;
+    border-radius: 50%;
+    border: 2rem solid var(--accent-1);
+    opacity: 25%;
+    z-index: -1;
+}
+
 .main-icons {
     display: grid;
     height: 100%;
