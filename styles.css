@@ -63,45 +63,10 @@ small, .text_small {font-size: 0.8rem;}
 */
 
 /* 
-==== HERO ====
+==== LANDING ====
 */
 
-.hero {
-    position: relative;
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 1fr 1fr;
-    border-radius: 1rem 1rem 0 0;
-}
 
-.hero-top {
-    position: relative;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    justify-content: center;
-    grid-area: 1 / 1;
-    background-color: var(--dark);
-    border-radius: 1rem 1rem 0 0;
-    color: var(--light);
-}
-
-.hero-top h1 {
-    margin: 0 0 0 1rem;
-    padding: 1rem;
-    font-size: 3.5rem;
-}
-
-.recycled {
-    color: var(--accent-1);
-    font-size: larger;
-    font-variant: small-caps;
-}
-
-.allegheny-county {
-    padding-bottom: 0.5rem;
-    border-bottom: 0.25rem solid var(--light);
-}
 
 /* 
 ==== / ====
