@@ -139,11 +139,11 @@ small, .text_small {font-size: 0.8rem;}
 
 .lb-background {
     position: absolute;
-    height: 10vmax;
-    width: 10vmax;
+    height: 0rem;
+    width: 0rem;
     border-radius: 50%;
-    border: 2rem solid var(--accent-1);
-    opacity: 25%;
+    border: 4rem solid var(--accent-1);
+    opacity: 0%;
     z-index: -1;
 }
 
@@ -168,11 +168,12 @@ small, .text_small {font-size: 0.8rem;}
 
 .main-icons svg {
     transition: all 250ms ease-in-out;
+    transform: perspective(1000px);
 }
 
 .main-icons svg:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: perspective(1000px) scale3d(1.2, 1.2, 2) rotateX(-10deg);
 }
 
 #Cardboard {
