@@ -67,16 +67,32 @@ info.addEventListener("mouseenter", (e) => {
 
 let selection = document.getElementsByClassName("selection");
 
+let selected = "";
+
 let modalTimeline = gsap.timeline({
+    delay: 0.5,
     paused: true
-})
-.to(".modal", {
-    height: 100 + "vh",
-    ease: "power1.inOut"
-})
+}).set(".modal", {
+    height: 100 + "vh"
+}).to(".modal-overlay", {
+    duration: 0.25,
+    height: 100 + "vh"
+}).to(".modal-overlay", {
+    duration: 1,
+    opacity: 50 + "%",
+    ease: "ease.in"
+}).to(".modal-container", {
+    duration: 2,
+    height: 80 + "%",
+    ease: "ease.inOut"
+}, "<50%").to(".modal-container", {
+    duration: 1,
+    opacity: 1
+}, "<")
 
 for (let i in selection) {
     selection[i].addEventListener("mouseenter", (e) => {
-        
+        selected = e.target.attributes.id
+        modalTimeline.play();
     })
 }

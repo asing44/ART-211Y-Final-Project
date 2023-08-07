@@ -247,11 +247,33 @@ i.fa-solid.fa-circle-info {
 
 .modal {
     position: absolute;
-    bottom: 0;
-    height: 20%;
+    display: flex;
+    height: 0;
     width: 100%;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    height: 0%;
+    width: 100%;
+    bottom: 0;
     background-color: var(--dark);
-    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 4;
+}
+
+.modal-container {
+    position: absolute;
+    height: 0%;
+    width: 85%;
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    background-color: var(--light);
+    opacity: 0%;
+    z-index: 5;
 }
 
 /* 
@@ -265,10 +287,10 @@ i.fa-solid.fa-circle-info {
 footer {
     position: absolute;
     bottom: 0;
-    height: 5%;
+    height: 4%;
     width: 100%;
-    background-color: var(--main);
-    z-index: 4;
+    background-color: var(--dark);
+    z-index: 5;
 }
 
 /* 
