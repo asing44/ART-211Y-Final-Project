@@ -2,8 +2,8 @@
     --headingFont: 'Ubuntu', sans-serif;
     --paragraphFont: 'Titillium Web', sans-serif;
     --dark: #282a2cff;
-    --light: #f0e4d9ff;
-    --main: #00a9a5ff;
+    --light: #f0e4d9;
+    --main: #00a9a5;
     --accent-1: #008000ff;
     --accent-2: #dc4541ff;
 }
@@ -75,6 +75,14 @@ small, .text_small {font-size: 0.8rem;}
     height: 100%;
 }
 
+.background-SVG {
+    position: absolute;
+    width: 100%;
+    image-rendering: optimizeQuality;
+    opacity: 50%;
+    z-index: -1;
+}
+
 /* Top */
 
 .landing-top {
@@ -111,21 +119,32 @@ small, .text_small {font-size: 0.8rem;}
 
 .instructions {
     position: absolute;
+    display: flex;
     height: 15%;
-    max-width: 40%;
-    top: 0%;
+    max-width: 10%;
+    top: 0;
     left: 0;
+    align-items: center;
+    justify-content: center;
     background-color: var(--dark);
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border-left-width: 0;
     color: var(--light);
+    cursor: pointer;
 }
 
 .container.lb-aside {
     height: 100%;
     width: 100%;
     padding: 1rem;
+    opacity: 0%;
+}
+
+i.fa-solid.fa-circle-info {
+    position: absolute;
+    font-size: 4rem;
+
 }
 
 .recycle-wheel {
@@ -142,8 +161,8 @@ small, .text_small {font-size: 0.8rem;}
     height: 0rem;
     width: 0rem;
     border-radius: 50%;
-    border: 4rem solid var(--accent-1);
-    opacity: 0%;
+    border: 4rem solid var(--light);
+    mix-blend-mode: overlay;
     z-index: -1;
 }
 
@@ -172,8 +191,8 @@ small, .text_small {font-size: 0.8rem;}
 }
 
 .main-icons svg:hover {
-    cursor: pointer;
     transform: perspective(1000px) scale3d(1.2, 1.2, 2) rotateX(-10deg);
+    cursor: pointer;
 }
 
 #Cardboard {
@@ -216,6 +235,40 @@ small, .text_small {font-size: 0.8rem;}
     position: absolute;
     height: 25%;
     z-index: 1;
+}
+
+/* 
+==== / ====
+*/
+
+/* 
+==== POPUP MODALS ====
+*/
+
+.modal {
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    background-color: var(--dark);
+    z-index: 3;
+}
+
+/* 
+==== / ====
+*/
+
+/* 
+==== FOOTER ====
+*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 5%;
+    width: 100%;
+    background-color: var(--main);
+    z-index: 4;
 }
 
 /* 
