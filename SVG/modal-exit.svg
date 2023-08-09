@@ -1,0 +1,15 @@
+<svg id="modal-exit" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300"
+    shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <ellipse id="modal-exit-s-ellipse1" rx="37.5" ry="37.5" transform="matrix(3.626179 0 0 3.626179 150 150)"
+        paint-order="stroke fill markers" fill="#f0e4d9" stroke-width="4" />
+    <ellipse id="modal-exit-s-ellipse2" rx="37.5" ry="37.5" transform="matrix(3.626179 0 0 3.626179 150 150)"
+        paint-order="stroke fill markers" fill="none" stroke="#282a2c" stroke-width="5" />
+    <g id="modal-exit-s-g1" transform="matrix(3.626179 0 0 3.626179-344.435283-344.435283)">
+        <line id="modal-exit-s-line1" x1="-18.75" y1="0" x2="18.75" y2="0"
+            transform="matrix(.707107-.707107 0.707107 0.707107 136.35159 136.35159)" fill="none" stroke="#282a2c"
+            stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+        <line id="modal-exit-s-line2" x1="-18.75" y1="0" x2="18.75" y2="0"
+            transform="matrix(.707107 0.707107-.707107 0.707107 136.35159 136.35159)" fill="none" stroke="#282a2c"
+            stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+</svg>

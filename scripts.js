@@ -65,11 +65,36 @@ info.addEventListener("mouseenter", (e) => {
 
 // <-- Modal animation -->
 
-let selection = document.getElementsByClassName("selection");
+// Modal exit click
+
+let modalExit = document.getElementById("modal-exit");
+
+modalExit.addEventListener("click", () => {
+    modalTimeline.reverse();
+})
+
+// Modal content array
+
+let modalContent = document.getElementsByClassName("modal-content")[0];
+
+let modalContentArray = {
+    metal_cans: "This is for metal cans. This is all for texting the word wrapping of the content.",
+    plastic_1_and_2: "This is for plastic 1 and 2"
+}
+
+// Modal image
+
+let modalImage = document.getElementsByClassName("modal-image")[0];
+
+// Modal selection
+
+let selection = document.getElementById("interactive-recycle").getElementsByTagName("g");
 
 let modalHeader = document.getElementsByClassName("modal-header")[0];
 
 let selected = "";
+
+let selectedData = "";
 
 let modalTimeline = gsap.timeline({
     delay: 0.5,
@@ -80,7 +105,9 @@ let modalTimeline = gsap.timeline({
     duration: 0.25,
     height: 100 + "vh",
     onComplete: function() {
-        modalHeader.innerHTML = selected.nodeValue;
+        modalHeader.innerHTML = selected;
+        modalContent.innerHTML = modalContentArray[selectedData]
+        modalImage.src = "./SVG/" + selected + ".svg";
     }
 }).to(".modal-overlay", {
     duration: 1,
@@ -95,9 +122,15 @@ let modalTimeline = gsap.timeline({
     opacity: 1,
 }, "<")
 
+modalImage.attributes.src = "./SVG/" + selected + ".svg";
+
 for (let i in selection) {
     selection[i].addEventListener("click", (e) => {
-        selected = e.target.attributes.id
+        selected = e.target.id;
+        selectedData = e.target.dataset.name;
+        console.log(selectedData)
         modalTimeline.play();
     })
 }
+
+// <-- / -->
