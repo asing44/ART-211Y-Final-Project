@@ -9,6 +9,39 @@
 }
 
 /* 
+==== BREAKPOINTS ====
+*/
+
+@media screen and (width > 620px) {
+    .screen-size-warning-container {
+        display: none;
+    }
+}
+
+@media screen and (width <= 620px) {
+    .screen-size-warning-container {
+        position: absolute;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--dark);
+        z-index: 100;
+    }
+
+    .screen-size-warning {
+        font-size: 2.5rem;
+        text-align: center;
+        color: var(--light);
+    }
+}
+
+/* 
+==== / ====
+*/
+
+/* 
 ==== GLOBAL ====
  */
 

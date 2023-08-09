@@ -78,7 +78,8 @@ let modalContentArray = {
     plastic_1_and_2: "#1-#7 plastics can be recycled. Items that are commonly recycled yet <span class='inline-negated'>not accepted</span> are: <ul><li>Shrink-wrap packaging</li><li>Unnumbered plastic</li><li>Toys</li></ul>",
     clear_and_colored_glass: "Many different types of glass are able to be recycled in Allegheny County. The items that <span class='inline-accepted'>are accepted</span> are: <ul><li>Clear glass bottles and jars</li><li>Green, brown, blue, or other colored glass jars</li></ul>The items that are <span class='inline-negated'>not accepted</span> are: <ul><li>Broken glass</li><li>Glassware</li><li>Window panes</li><li>Mirros</li><li>Light bulbs</li></ul>",
     cardboard: "Only corrugated cardboard is able to be recycled. This is the cardbaord that contains ridges in grooves in the interior walls of the package. Soiled cardboard containers of any type are <span class='inline-negated'>not accepted</span>.",
-
+    newspaper_and_magazines: "Magazines and newspaper are accepted for recycling. Any kind of soiled newspaper or magazine <span class='inline-negated'>not accepted</span> for recycling.",
+    loose_paper: "Standard white printing paper or other high-grade papers <span class='inline-accepted'>can be</span> recycled. Any type of paper that is soiled <span class='inline-negated'>cannot be</span> recycled."
 }
 
 // Modal image
