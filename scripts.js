@@ -39,6 +39,8 @@ t1.to(circle, {
 
 let info = document.getElementsByClassName("instructions")[0];
 
+let infoContent = document.getElementsByClassName("instructions-content")[0];
+
 info.addEventListener("mouseenter", (e) => {
 
     info.addEventListener("mouseleave", (e) => {
@@ -49,13 +51,16 @@ info.addEventListener("mouseenter", (e) => {
         defaults: {
             ease: "power1.out"
         }
-    }).to(info, {
+    })
+    .to(info, {
         duration: 1,
         maxWidth: 40,
-    }).to(".fa-solid.fa-circle-info", {
+    })
+    .to(".fa-solid.fa-circle-info", {
         duration: 0.5,
         opacity: 0
-    }, "<").to(".container.lb-aside", {
+    }, "<")
+    .to(".container.lb-aside", {
         duration: 0.5,
         opacity: 100 + "%"
     }, 0.7)
@@ -78,7 +83,7 @@ modalExit.addEventListener("click", () => {
 let modalContent = document.getElementsByClassName("modal-content")[0];
 
 let modalContentArray = {
-    metal_cans: "This is for metal cans. This is all for texting the word wrapping of the content.",
+    metal_cans: "Aluminum, steel, and tin cans can be recycled. Items that are commonly recycled yet <span class='inline-negated'>not accepted</span> are scrap metal, car parts, and appliances.",
     plastic_1_and_2: "This is for plastic 1 and 2"
 }
 
@@ -98,7 +103,8 @@ let selectedData = "";
 
 let modalTimeline = gsap.timeline({
     delay: 0.5,
-    paused: true
+    paused: true,
+    smoothChildTiming: true,
 }).set(".modal", {
     height: 100 + "vh"
 }).to(".modal-overlay", {
@@ -120,7 +126,11 @@ let modalTimeline = gsap.timeline({
 }, "<50%").to(".modal-container", {
     duration: 1,
     opacity: 1,
-}, "<")
+}, "<").to(".modal-image", {
+    duration: 1,
+    opacity: 1,
+    ease: "ease.in",
+})
 
 modalImage.attributes.src = "./SVG/" + selected + ".svg";
 
