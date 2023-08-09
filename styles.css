@@ -70,6 +70,13 @@ small, .text_small {font-size: 0.8rem;}
     color: var(--light)
 }
 
+.inline-accepted {
+    padding: 0rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--accent-1);
+    color: var(--light)
+}
+
 /* 
 ==== / ====
 */
@@ -143,21 +150,15 @@ small, .text_small {font-size: 0.8rem;}
     overflow: hidden;
 }
 
-.container.lb-aside {
-    position: relative;
-    padding: 1rem;
+.instructions-content {
+    padding: 0 0.5rem;
     opacity: 0%;
 }
 
-.instructions-content {
-    height: auto;
-    width: 100%;
-    margin: 0;
-}
-
-i.fa-solid.fa-circle-info {
+.instructions-symbol {
     position: absolute;
-    font-size: calc(100%);
+    font-size: 5vmax;
+    opacity: 100%;
 }
 
 .recycle-wheel {
@@ -242,6 +243,7 @@ i.fa-solid.fa-circle-info {
     background-color: var(--light);
     opacity: 0%;
     pointer-events: all;
+    overflow: hidden;
     z-index: 5;
 }
 
