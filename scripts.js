@@ -133,7 +133,6 @@ for (let i in selection) {
     selection[i].addEventListener("click", (e) => {
         selected = e.target.id;
         selectedData = e.target.dataset.name;
-        console.log(selectedData)
         modalTimeline.play();
     })
 }
