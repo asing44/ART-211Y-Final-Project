@@ -14,26 +14,17 @@ let t1 = gsap.timeline({
 t1.set(circle, {
     borderWidth: 0,
     opacity: 0,
-});
-
-t1.to(circle, {
-    duration: 2,
-    borderWidth: 2 + "rem",
-    opacity: 20,
-})
-
-t1.to(circle, {
+}).to(circle, {
     duration: 5,
+    norderWidth: 4,
     height: 70 + "rem",
     width: 70 + "rem",
-    opacity: 100
-});
-
-t1.to(circle, {
+    opacity: 75
+}).to(circle, {
     duration: 5,
     opacity: 0,
     borderWidth: 1 + "rem",
-}, "<")
+}, "<");
 
 // <-- Aside instructions animation -->
 
@@ -53,17 +44,17 @@ info.addEventListener("mouseenter", (e) => {
         }
     })
     .to(info, {
-        duration: 1,
+        duration: 0.5,
         maxWidth: 40,
     })
-    .to(".fa-solid.fa-circle-info", {
+    .to(".instructions-content", {
         duration: 0.5,
+        opacity: 1
+    }, "<50%")
+    .to(".instructions-symbol", {
+        duration: 0.25,
         opacity: 0
-    }, "<")
-    .to(".container.lb-aside", {
-        duration: 0.5,
-        opacity: 100 + "%"
-    }, 0.7)
+    }, 0)
 })
 
 // < -- / -->
@@ -83,8 +74,12 @@ modalExit.addEventListener("click", () => {
 let modalContent = document.getElementsByClassName("modal-content")[0];
 
 let modalContentArray = {
-    metal_cans: "Aluminum, steel, and tin cans can be recycled. Items that are commonly recycled yet <span class='inline-negated'>not accepted</span> are scrap metal, car parts, and appliances.",
-    plastic_1_and_2: "This is for plastic 1 and 2"
+    metal_cans: "Aluminum, steel, and tin cans can be recycled. Items that are commonly recycled yet <span class='inline-negated'>not accepted</span> are: <ul><li>Scap metal</li><li>Car parts</li><li>Appliances</li></ul>",
+    plastic_1_and_2: "#1-#7 plastics can be recycled. Items that are commonly recycled yet <span class='inline-negated'>not accepted</span> are: <ul><li>Shrink-wrap packaging</li><li>Unnumbered plastic</li><li>Toys</li></ul>",
+    clear_and_colored_glass: "Many different types of glass are able to be recycled in Allegheny County. The items that <span class='inline-accepted'>are accepted</span> are: <ul><li>Clear glass bottles and jars</li><li>Green, brown, blue, or other colored glass jars</li></ul>The items that are <span class='inline-negated'>not accepted</span> are: <ul><li>Broken glass</li><li>Glassware</li><li>Window panes</li><li>Mirros</li><li>Light bulbs</li></ul>",
+    cardboard: "Only corrugated cardboard is able to be recycled. This is the cardbaord that contains ridges in grooves in the interior walls of the package. Soiled cardboard containers of any type are <span class='inline-negated'>not accepted</span>.",
+    newspaper_and_magazines: "Magazines and newspaper are accepted for recycling. Any kind of soiled newspaper or magazine <span class='inline-negated'>not accepted</span> for recycling.",
+    loose_paper: "Standard white printing paper or other high-grade papers <span class='inline-accepted'>can be</span> recycled. Any type of paper that is soiled <span class='inline-negated'>cannot be</span> recycled."
 }
 
 // Modal image
@@ -138,7 +133,6 @@ for (let i in selection) {
     selection[i].addEventListener("click", (e) => {
         selected = e.target.id;
         selectedData = e.target.dataset.name;
-        console.log(selectedData)
         modalTimeline.play();
     })
 }

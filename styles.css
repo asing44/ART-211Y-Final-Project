@@ -9,6 +9,39 @@
 }
 
 /* 
+==== BREAKPOINTS ====
+*/
+
+@media screen and (width > 620px) {
+    .screen-size-warning-container {
+        display: none;
+    }
+}
+
+@media screen and (width <= 620px) {
+    .screen-size-warning-container {
+        position: absolute;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--dark);
+        z-index: 100;
+    }
+
+    .screen-size-warning {
+        font-size: 2.5rem;
+        text-align: center;
+        color: var(--light);
+    }
+}
+
+/* 
+==== / ====
+*/
+
+/* 
 ==== GLOBAL ====
  */
 
@@ -67,6 +100,13 @@ small, .text_small {font-size: 0.8rem;}
     padding: 0rem 0.5rem;
     border-radius: 0.5rem;
     background-color: var(--accent-2);
+    color: var(--light)
+}
+
+.inline-accepted {
+    padding: 0rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--accent-1);
     color: var(--light)
 }
 
@@ -143,21 +183,15 @@ small, .text_small {font-size: 0.8rem;}
     overflow: hidden;
 }
 
-.container.lb-aside {
-    position: relative;
-    padding: 1rem;
+.instructions-content {
+    padding: 0 0.5rem;
     opacity: 0%;
 }
 
-.instructions-content {
-    height: auto;
-    width: 100%;
-    margin: 0;
-}
-
-i.fa-solid.fa-circle-info {
+.instructions-symbol {
     position: absolute;
-    font-size: calc(100%);
+    font-size: 5vmax;
+    opacity: 100%;
 }
 
 .recycle-wheel {
@@ -242,6 +276,7 @@ i.fa-solid.fa-circle-info {
     background-color: var(--light);
     opacity: 0%;
     pointer-events: all;
+    overflow: hidden;
     z-index: 5;
 }
 
